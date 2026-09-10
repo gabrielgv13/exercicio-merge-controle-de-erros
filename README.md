@@ -77,6 +77,57 @@ git commit -m "merge: combina desconto e imposto"
 
 ---
 
+## Terminologia Técnica do Git
+
+### Conceitos Fundamentais
+
+| Termo | Significado |
+|-------|-------------|
+| **Repository (Repo)** | Repositório - pasta onde o Git guarda todo o histórico de alterações |
+| **Commit** | Snapshot/ponto de salvamento do código em um momento específico |
+| **Branch** | Ramificação - linha paralela de desenvolvimento |
+| **Merge** | Junção de duas branches em uma |
+| **Conflict** | Conflito quando o Git não consegue mesclar automaticamente |
+| **HEAD** | Ponteiro que indica onde você está no histórico |
+
+### Branch Local vs Remota
+
+| Tipo | Descrição | Exemplo |
+|------|-----------|---------|
+| **Local** | Branch que existe apenas no seu computador | `main`, `feature/desconto` |
+| **Remote** | Branch que existe no servidor GitHub | `origin/main`, `origin/feature/desconto` |
+
+**Estrutura:**
+```
+Seu Computador (LOCAL)          GitHub (REMOTO)
+─────────────────────           ────────────────
+main                         ←  origin/main
+feature/desconto             ←  origin/feature/desconto
+feature/imposto              ←  origin/feature/imposto
+```
+
+### Remote (Origin)
+
+| Termo | Significado |
+|-------|-------------|
+| **origin** | Nome padrão do repositório remoto (pode ser alterado) |
+| **remote** | Servidor onde o código fica armazenado |
+| **fetch** | Baixar dados do remote sem mesclar |
+| **pull** | Baixar e mesclar dados do remote |
+| **push** | Enviar commits para o remote |
+
+### Workflow Git Typical
+
+```
+1. git clone <URL>        → Copia repo do GitHub para PC
+2. git checkout -b xxx   → Cria branch local
+3. git add + commit       → Salva alterações localmente
+4. git push -u origin xxx → Envia branch para GitHub
+5. Pull Request           → Solicita mesclar no GitHub
+```
+
+---
+
 ## Explicação dos Comandos Utilizados
 
 | Comando | Explicação |
@@ -114,10 +165,10 @@ git log --oneline
 ### Branches
 
 ```bash
-# Listar branches
+# Listar branches locais
 git branch
 
-# Listar todas as branches (incluindo remotas)
+# Listar TODAS as branches (locais + remotas)
 git branch -a
 
 # Criar branch sem trocar
@@ -129,7 +180,7 @@ git checkout -b <nome>
 # Trocar de branch
 git checkout <nome>
 
-# Deletar branch
+# Deletar branch local
 git branch -d <nome>
 ```
 
@@ -158,6 +209,9 @@ git remote add origin <URL>
 
 # Ver remotes configurados
 git remote -v
+
+# Renomear remote (opcional)
+git remote rename origin upstream
 
 # Enviar branch para GitHub
 git push -u origin <branch>
