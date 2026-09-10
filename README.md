@@ -1,3 +1,42 @@
+# Instalação do Git e Clone do Repositório
+
+## 1. Instalar o Git
+
+1. Acesse: [https://git-scm.com/install/windows](https://git-scm.com/install/windows)
+2. Clique em **Standalone Installer**
+3. Baixe o instalador: **[Git for Windows/x64 Setup](https://github.com/git-for-windows/git/releases/download/v2.55.0.windows.5/Git-2.55.0.5-64-bit.exe)**
+4. Execute o instalador e siga os passos padrão
+
+## 2. Clonar o Repositório
+
+1. Crie uma pasta onde deseja baixar o projeto
+2. Clique com o botão direito na pasta
+3. Selecione: **Abrir no terminal** (ou "Open in Terminal")
+4. Execute o comando:
+   ```bash
+   git clone https://github.com/gabrielgv13/exercicio-merge-controle-de-erros.git
+   ```
+5. Acesse a pasta do projeto:
+   ```bash
+   cd exercicio-merge-controle-de-erros
+   ```
+
+## 3. Abrir no VS Code
+
+```bash
+code .
+```
+
+## 4. Criar Fork no GitHub
+
+1. No VS Code, abra o painel **Source Control** (Ctrl+Shift+G)
+2. Clique em **"Publish to GitHub"**
+3. Selecione **"Fork Repository"**
+4. Escolha sua conta GitHub
+5. O fork será criado automaticamente
+
+---
+
 # Exercício: Resolução de Conflito de Merge
 
 ## Objetivo
