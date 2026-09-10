@@ -26,13 +26,17 @@
    ```
 4. Acesse a pasta do projeto com o vscode, abra o terminal e digite os seguintes comandos:
 Para pegar as branches do meu repositório (este):
-git remote add upstream https://github.com/gabrielgv13/exercicio-merge-controle-de-erros
-git fetch upstream
+```bash
+   git remote add upstream https://github.com/gabrielgv13/exercicio-merge-controle-de-erros
+   git fetch upstream
+   ```
+
 
 No campo inferior esquerdo, selecione a branch copiada upstream/feature/desconto.
 Para copiar para o seu fork:
-git push origin feature/desconto
-
+```bash
+   git push origin feature/desconto
+   ```
 Faça o mesmo para feature/imposto
 Comece a atividade.
 
