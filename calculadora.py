@@ -15,4 +15,6 @@ def calcular_preco_total(preco_base, quantidade):
     Returns:
         float: Preço total calculado
     """
-    return preco_base * quantidade
+    imposto = 0.15  # 15% de imposto
+    subtotal = preco_base * quantidade
+    return subtotal * (1 + imposto)
