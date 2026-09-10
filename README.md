@@ -72,6 +72,12 @@ git config --global user.name "Seu Nome"
 git config --global user.email "seu.email@exemplo.com"
 ```
 
+ANTES DE TUDO:
+git remote add upstream https://github.com/gabrielgv13/exercicio-merge-controle-de-erros
+git fetch upstream
+git push origin feature/desconto
+git push origin feature/imposto
+
 ### 2. Estar na branch `feature/imposto`
 
 ```bash
