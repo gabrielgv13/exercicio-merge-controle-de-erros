@@ -7,33 +7,34 @@
 3. Baixe o instalador: **[Git for Windows/x64 Setup](https://github.com/git-for-windows/git/releases/download/v2.55.0.windows.5/Git-2.55.0.5-64-bit.exe)**
 4. Execute o instalador e siga os passos padrão
 
-## 2. Clonar o Repositório
-
-1. Crie uma pasta onde deseja baixar o projeto
-2. Clique com o botão direito na pasta
-3. Selecione: **Abrir no terminal** (ou "Open in Terminal")
-4. Execute o comando:
-   ```bash
-   git clone https://github.com/gabrielgv13/exercicio-merge-controle-de-erros.git
-   ```
-5. Acesse a pasta do projeto:
-   ```bash
-   cd exercicio-merge-controle-de-erros
-   ```
-
-## 3. Abrir no VS Code
-
-```bash
-code .
-```
-
-## 4. Criar Fork no GitHub
+## 2. Criar Fork no GitHub
 
 1. No VS Code, abra o painel **Source Control** (Ctrl+Shift+G)
 2. Clique em **"Publish to GitHub"**
 3. Selecione **"Fork Repository"**
 4. Escolha sua conta GitHub
 5. O fork será criado automaticamente
+
+## 3. Clonar o Repositório
+
+1. Crie uma pasta onde deseja baixar o projeto
+2. Clique com o botão direito na pasta
+3. Selecione: **Abrir no terminal** (ou "Open in Terminal" ou "Open git bash here") 
+4. Execute o comando:
+   ```bash
+   git clone link-do-seu-fork
+   ```
+4. Acesse a pasta do projeto com o vscode, abra o terminal e digite os seguintes comandos:
+Para pegar as branches do meu repositório (este):
+git remote add upstream https://github.com/gabrielgv13/exercicio-merge-controle-de-erros
+git fetch upstream
+
+No campo inferior esquerdo, selecione a branch copiada upstream/feature/desconto.
+Para copiar para o seu fork:
+git push origin feature/desconto
+
+Faça o mesmo para feature/imposto
+Comece a atividade.
 
 ---
 
